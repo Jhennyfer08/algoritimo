@@ -21,8 +21,12 @@ switch (operacao) {
     break;
 
     case "/" || "divisão" || "fração":
-        prompt(`A divisão com o número 0 é impossível pois sempre resulta em 0, portanto tenha o bom senso e não digite o 0 na divisão, ok? `)
-        resultado = num1 / num2
-        window.document.body.innerHTML = prompt(`A divisão dos números ${num1} e ${num2} é igual á ${resultado}`) 
+        if (num1 == 0 || num2 == 0) {
+            prompt(`A divisão com o número 0 é impossível pois sempre resulta em 0, portanto tenha o bom senso e não digite o 0 na divisão, ok? `)
+            resultado = num1 / num2
+            window.document.body.innerHTML = prompt(`A divisão dos números ${num1} e ${num2} é igual á 0. Como eu disse anteriormente, se tivesse me escutado né mana`)        
+        }else{
+            resultado = num1 / num2
+            window.document.body.innerHTML = prompt(`A divisão dos números ${num1} e ${num2} é igual á ${resultado}`) }
     break;
 }
